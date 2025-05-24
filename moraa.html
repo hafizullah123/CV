@@ -26,29 +26,50 @@
         font-size: 2.5rem;
         margin-bottom: 10px;
         letter-spacing: 1px;
+        text-align: center;
+        font-weight: 700;
+        letter-spacing: 2px;
       }
       .section {
         margin-bottom: 32px;
         background: #f7faff;
-        border-radius: 12px;
-        padding: 22px 24px 16px 24px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-        border-left: 5px solid #007bff;
+        border-radius: 18px;
+        padding: 0;
+        box-shadow: 0 4px 18px rgba(0, 123, 255, 0.08),
+          0 1.5px 6px rgba(0, 0, 0, 0.04);
+        border: none;
+        overflow: hidden;
+        transition: box-shadow 0.2s;
+      }
+      .section:hover {
+        box-shadow: 0 8px 32px rgba(0, 123, 255, 0.18),
+          0 2px 8px rgba(0, 0, 0, 0.08);
       }
       .section-title {
-        color: #007bff;
-        border-bottom: 1.5px solid #007bff;
-        margin-bottom: 14px;
-        font-size: 1.3rem;
+        background: linear-gradient(90deg, #007bff 60%, #5bc0f7 100%);
+        color: #fff;
+        margin: 0;
+        padding: 18px 24px 12px 24px;
+        font-size: 1.25rem;
         letter-spacing: 0.5px;
-        padding-bottom: 4px;
+        border-bottom: 2px solid #e0eafc;
+        font-weight: 600;
+        border-radius: 0 0 12px 0;
+        box-shadow: 0 2px 8px rgba(0, 123, 255, 0.04);
+      }
+      .section ul,
+      .section p {
+        padding: 18px 24px 16px 32px;
+        margin: 0;
       }
       ul {
-        margin-left: 18px;
+        margin-left: 0;
         padding-left: 0;
       }
       li {
         margin-bottom: 8px;
+        color: #444;
+        font-size: 1.05rem;
       }
       strong {
         color: #22223b;
@@ -61,8 +82,13 @@
         .container {
           padding: 15px 5px;
         }
-        .section {
-          padding: 12px 8px 8px 8px;
+        .section-title {
+          padding: 12px 10px 8px 10px;
+          font-size: 1rem;
+        }
+        .section ul,
+        .section p {
+          padding: 10px 10px 8px 18px;
         }
         h1 {
           font-size: 1.5rem;
