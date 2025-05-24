@@ -23,43 +23,69 @@
       }
       h1 {
         color: #22223b;
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-        letter-spacing: 1px;
-        text-align: center;
-        font-weight: 700;
+        font-size: 2.7rem;
+        margin-bottom: 8px;
         letter-spacing: 2px;
+        text-align: center;
+        font-weight: 800;
+        text-shadow: 0 2px 8px #e0eafc;
+      }
+      .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px 32px;
+        margin-bottom: 32px;
+        font-size: 1.08rem;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #333;
+      }
+      .contact-item i {
+        color: #007bff;
+        font-size: 1.1em;
+        min-width: 20px;
       }
       .section {
         margin-bottom: 32px;
-        background: #f7faff;
-        border-radius: 18px;
-        padding: 0;
-        box-shadow: 0 4px 18px rgba(0, 123, 255, 0.08),
-          0 1.5px 6px rgba(0, 0, 0, 0.04);
-        border: none;
+        background: #fafdff;
+        border-radius: 16px;
+        box-shadow: 0 2px 12px rgba(0, 123, 255, 0.07),
+          0 1.5px 6px rgba(0, 0, 0, 0.03);
+        border-left: 6px solid #007bff;
         overflow: hidden;
-        transition: box-shadow 0.2s;
+        transition: box-shadow 0.2s, border-color 0.2s;
       }
       .section:hover {
-        box-shadow: 0 8px 32px rgba(0, 123, 255, 0.18),
+        box-shadow: 0 8px 32px rgba(0, 123, 255, 0.13),
           0 2px 8px rgba(0, 0, 0, 0.08);
+        border-left: 6px solid #0056b3;
       }
       .section-title {
-        background: linear-gradient(90deg, #007bff 60%, #5bc0f7 100%);
+        background: linear-gradient(90deg, #007bff 70%, #5bc0f7 100%);
         color: #fff;
         margin: 0;
-        padding: 18px 24px 12px 24px;
+        padding: 16px 28px 12px 32px;
         font-size: 1.25rem;
         letter-spacing: 0.5px;
-        border-bottom: 2px solid #e0eafc;
-        font-weight: 600;
-        border-radius: 0 0 12px 0;
+        font-weight: 700;
+        border-radius: 0 0 14px 0;
         box-shadow: 0 2px 8px rgba(0, 123, 255, 0.04);
+        border-bottom: 1.5px solid #e0eafc;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .section-title i {
+        font-size: 1.2em;
+        color: #fff;
       }
       .section ul,
       .section p {
-        padding: 18px 24px 16px 32px;
+        padding: 18px 32px 16px 40px;
         margin: 0;
       }
       ul {
@@ -67,31 +93,34 @@
         padding-left: 0;
       }
       li {
-        margin-bottom: 8px;
+        margin-bottom: 10px;
         color: #444;
-        font-size: 1.05rem;
+        font-size: 1.08rem;
+        line-height: 1.6;
       }
       strong {
-        color: #22223b;
-      }
-      p,
-      li {
-        color: #444;
+        color: #007bff;
+        font-weight: 600;
       }
       @media (max-width: 600px) {
         .container {
-          padding: 15px 5px;
+          padding: 10px 2px;
         }
         .section-title {
-          padding: 12px 10px 8px 10px;
-          font-size: 1rem;
+          padding: 12px 10px 8px 12px;
+          font-size: 1.05rem;
         }
         .section ul,
         .section p {
           padding: 10px 10px 8px 18px;
         }
         h1 {
-          font-size: 1.5rem;
+          font-size: 1.3rem;
+        }
+        .contact-info {
+          flex-direction: column;
+          gap: 6px;
+          font-size: 0.98rem;
         }
       }
     </style>
@@ -99,17 +128,38 @@
   <body>
     <div class="container">
       <h1>Hafizullah Jihadwal</h1>
-      <p>
-        <strong>Address:</strong> Kabul, Afghanistan<br />
-        <strong>Phone:</strong> [Your Phone Number]<br />
-        <strong>Email:</strong> [Your Email Address]<br />
-        <strong>Date of Birth:</strong> [Your DOB]<br />
-        <strong>Nationality:</strong> Afghan<br />
-        <strong>Marital Status:</strong> [Single/Married]
-      </p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          Kabul, Afghanistan
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          [Your Phone Number]
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          [Your Email Address]
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-birthday-cake"></i>
+          [Your DOB]
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-flag"></i>
+          Afghan
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-venus-mars"></i>
+          [Single/Married]
+        </div>
+      </div>
 
       <div class="section">
-        <h2 class="section-title">Education</h2>
+        <h2 class="section-title">
+          <i class="fas fa-graduation-cap"></i>
+          Education
+        </h2>
         <ul>
           <li>
             <strong>Bachelor of Computer Science</strong>, Kabul Education
@@ -127,7 +177,10 @@
       </div>
 
       <div class="section">
-        <h2 class="section-title">Work Experience</h2>
+        <h2 class="section-title">
+          <i class="fas fa-briefcase"></i>
+          Work Experience
+        </h2>
         <ul>
           <li>
             <strong>Computer Teacher</strong> – Kabul Education University (Jan
@@ -162,7 +215,10 @@
       </div>
 
       <div class="section">
-        <h2 class="section-title">Achievements</h2>
+        <h2 class="section-title">
+          <i class="fas fa-trophy"></i>
+          Achievements
+        </h2>
         <ul>
           <li>
             Developed a digital library system for Kabul Education University.
@@ -178,7 +234,10 @@
       </div>
 
       <div class="section">
-        <h2 class="section-title">Technical Skills</h2>
+        <h2 class="section-title">
+          <i class="fas fa-cogs"></i>
+          Technical Skills
+        </h2>
         <ul>
           <li>
             <strong>Languages:</strong> Python, Java, C++, PHP, JavaScript
@@ -195,7 +254,10 @@
       </div>
 
       <div class="section">
-        <h2 class="section-title">Certifications</h2>
+        <h2 class="section-title">
+          <i class="fas fa-certificate"></i>
+          Certifications
+        </h2>
         <ul>
           <li>Computer Networking – Kabul Center Institute, [Year]</li>
           <li>Teaching Methodology – Kabul Center Institute, [Year]</li>
@@ -204,7 +266,10 @@
       </div>
 
       <div class="section">
-        <h2 class="section-title">References</h2>
+        <h2 class="section-title">
+          <i class="fas fa-users"></i>
+          References
+        </h2>
         <p>Available upon request.</p>
       </div>
     </div>
