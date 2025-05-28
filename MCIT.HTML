@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hafizullah Jihadwal - Senior System Development Specialist</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      :root {
+        --primary-color: #0066cc;
+        --bg-color: #f5f7fa;
+        --accent: #1f2937;
+        --light: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        background: var(--bg-color);
+        color: var(--accent);
+      }
+
+      .header {
+        background: var(--primary-color);
+        color: var(--light);
+        padding: 40px 20px;
+        text-align: center;
+        position: relative;
+      }
+
+      .header h1 {
+        margin-bottom: 5px;
+        font-size: 36px;
+      }
+
+      .header p {
+        font-size: 18px;
+        margin-top: 0;
+      }
+
+      .action-buttons {
+        margin-top: 20px;
+      }
+
+      .action-buttons a {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 10px 18px;
+        background: #ffffff;
+        color: var(--primary-color);
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .action-buttons a:hover {
+        background: #e6f0ff;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1100px;
+        margin: 20px auto;
+        background: var(--light);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .sidebar {
+        background-color: #1f2937;
+        color: white;
+        padding: 30px;
+        width: 30%;
+        min-width: 280px;
+      }
+
+      .sidebar h3 {
+        border-bottom: 2px solid #444;
+        padding-bottom: 5px;
+        margin-top: 20px;
+      }
+
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .sidebar li {
+        margin: 10px 0;
+        font-size: 15px;
+      }
+
+      .sidebar i {
+        color: #00c0ff;
+        margin-right: 8px;
+      }
+
+      .main {
+        width: 70%;
+        padding: 30px;
+      }
+
+      .section {
+        margin-bottom: 30px;
+      }
+
+      .section h2 {
+        border-left: 4px solid var(--primary-color);
+        padding-left: 10px;
+        margin-bottom: 10px;
+        font-size: 24px;
+        color: var(--primary-color);
+      }
+
+      .section ul {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+
+      .section ul li {
+        margin-bottom: 8px;
+      }
+
+      .highlight {
+        font-weight: bold;
+        color: #333;
+      }
+
+      .social-links a {
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 20px;
+        color: #ffffff;
+        transition: 0.3s;
+      }
+
+      .social-links a:hover {
+        color: #00c0ff;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+        .sidebar,
+        .main {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Hafizullah Jihadwal</h1>
+      <p>Senior System Development Specialist</p>
+      <div class="action-buttons">
+        <a href="https://your-portfolio-link.com" target="_blank"
+          ><i class="fas fa-globe"></i> Portfolio</a
+        >
+        <a
+          href="https://www.linkedin.com/in/hafizullah-jihadwal"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i> LinkedIn</a
+        >
+        <a href="cv.pdf" download
+          ><i class="fas fa-file-download"></i> Download CV</a
+        >
+        <a href="mailto:jihadwal.h@gmail.com"
+          ><i class="fas fa-envelope"></i> Hire Me</a
+        >
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="sidebar">
+        <h3><i class="fas fa-user"></i> Contact</h3>
+        <p><i class="fas fa-phone-alt"></i> +93 XXX XXX XXX</p>
+        <p><i class="fas fa-envelope"></i> jihadwal.h@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Kabul, Afghanistan</p>
+
+        <h3><i class="fas fa-tools"></i> Skills</h3>
+        <ul>
+          <li>Java, PHP, Python, C#</li>
+          <li>Spring, Laravel, Django</li>
+          <li>React, Angular, Node.js</li>
+          <li>SQL, MongoDB, NoSQL</li>
+          <li>Docker, Git, CI/CD</li>
+          <li>Agile, TDD, System Design</li>
+        </ul>
+
+        <h3><i class="fas fa-language"></i> Languages</h3>
+        <ul>
+          <li>English</li>
+          <li>Pashto</li>
+          <li>Dari</li>
+        </ul>
+
+        <h3><i class="fas fa-certificate"></i> Certifications</h3>
+        <ul>
+          <li>Oracle Certified Java Developer</li>
+          <li>Advanced React Developer - Udemy</li>
+          <li>Agile Software Dev - Coursera</li>
+        </ul>
+
+        <h3><i class="fas fa-share-alt"></i> Social</h3>
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/hafizullah-jihadwal"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://your-portfolio-link.com" target="_blank"
+            ><i class="fas fa-globe"></i
+          ></a>
+          <a href="mailto:jihadwal.h@gmail.com"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="section">
+          <h2>Career Objective</h2>
+          <p>
+            Experienced software engineer with 7+ years building scalable web
+            systems. Passionate about innovation, system architecture, and
+            leading agile teams. Eager to bring expertise to MCIT's digital
+            transformation initiatives.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>Experience</h2>
+          <p class="highlight">Senior Software Engineer – TechNova Solutions</p>
+          <p><em>2021 – Present</em></p>
+          <ul>
+            <li>
+              Architected and deployed enterprise web apps using Java Spring and
+              React.
+            </li>
+            <li>
+              Implemented DevOps pipeline; reduced deployment time by 50%.
+            </li>
+            <li>
+              Managed team of 6, performed code reviews, led sprint planning.
+            </li>
+          </ul>
+
+          <p class="highlight">Full Stack Developer – Afghan IT Hub</p>
+          <p><em>2017 – 2020</em></p>
+          <ul>
+            <li>
+              Developed platforms using Laravel and Vue.js for public sector.
+            </li>
+            <li>Boosted performance by 30% through code refactoring.</li>
+          </ul>
+
+          <p class="highlight">Junior Developer – MCIT (Contract)</p>
+          <p><em>2015 – 2017</em></p>
+          <ul>
+            <li>Contributed to early government e-services tools and forms.</li>
+            <li>Built reusable modules and standardized documentation.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>Education</h2>
+          <p>
+            <strong>Bachelor of Computer Science</strong> – Kabul University,
+            2015
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>Major Projects</h2>
+          <ul>
+            <li>
+              <strong>National E-Services Portal:</strong> Used by over 100k
+              citizens.
+            </li>
+            <li>
+              <strong>Inventory ERP:</strong> For national-level logistics.
+            </li>
+            <li>
+              <strong>e-Clinic:</strong> Digital patient records for 20+ health
+              centers.
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>Achievements</h2>
+          <ul>
+            <li>Maintained 99.9% uptime on core services for 12+ months.</li>
+            <li>Awarded “Best Developer” at Afghan IT Hub in 2019.</li>
+            <li>Mentored 10+ junior devs into mid-level roles.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>References</h2>
+          <p>Available upon request.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
