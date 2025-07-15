@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hafizullah Jihadwal | Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #007bff;
+        --secondary: #22223b;
+        --bg: #f7fafd;
+        --white: #fff;
+        --gray: #444;
+        --accent: #5bc0f7;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Roboto", Arial, sans-serif;
+        background: var(--bg);
+        color: var(--secondary);
+      }
+      header {
+        background: linear-gradient(
+          90deg,
+          var(--primary) 70%,
+          var(--accent) 100%
+        );
+        color: var(--white);
+        padding: 60px 0 40px 0;
+        text-align: center;
+        box-shadow: 0 4px 24px rgba(0, 123, 255, 0.08);
+      }
+      header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        font-weight: 700;
+      }
+      header p {
+        font-size: 1.25rem;
+        margin-bottom: 24px;
+        color: #e0eafc;
+      }
+      .social-links a {
+        color: var(--white);
+        margin: 0 10px;
+        font-size: 1.5rem;
+        transition: color 0.2s;
+        text-decoration: none;
+      }
+      .social-links a:hover {
+        color: #ffe066;
+      }
+      nav {
+        background: var(--white);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        padding: 0.5rem 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+      nav a {
+        color: var(--primary);
+        text-decoration: none;
+        margin: 0 18px;
+        font-weight: 500;
+        font-size: 1.08rem;
+        transition: color 0.2s;
+        padding-bottom: 4px;
+        border-bottom: 2px solid transparent;
+      }
+      nav a:hover,
+      nav a.active {
+        color: var(--secondary);
+        border-bottom: 2px solid var(--primary);
+      }
+      main {
+        max-width: 1050px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+      section {
+        background: var(--white);
+        border-radius: 16px;
+        box-shadow: 0 2px 12px rgba(0, 123, 255, 0.07),
+          0 1.5px 6px rgba(0, 0, 0, 0.03);
+        margin-bottom: 36px;
+        padding: 36px 32px 28px 32px;
+        transition: box-shadow 0.2s;
+      }
+      section:hover {
+        box-shadow: 0 8px 32px rgba(0, 123, 255, 0.13),
+          0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+      section h2 {
+        color: var(--primary);
+        margin-top: 0;
+        margin-bottom: 18px;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 700;
+      }
+      .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 32px;
+      }
+      .about-img {
+        flex: 0 0 140px;
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        background: #e0eafc;
+        overflow: hidden;
+        box-shadow: 0 2px 12px rgba(0, 123, 255, 0.07);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .about-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      .about-text {
+        flex: 1;
+        min-width: 220px;
+        font-size: 1.08rem;
+        color: var(--gray);
+      }
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px 32px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .skills-list li {
+        background: #e0eafc;
+        color: var(--primary);
+        padding: 10px 22px;
+        border-radius: 22px;
+        font-weight: 500;
+        font-size: 1.05rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 1px 4px rgba(0, 123, 255, 0.04);
+      }
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px;
+      }
+      .project-card {
+        background: #fafdff;
+        border-radius: 14px;
+        box-shadow: 0 2px 8px rgba(0, 123, 255, 0.06);
+        padding: 22px 18px 18px 18px;
+        transition: box-shadow 0.2s, transform 0.2s;
+        border-left: 5px solid var(--primary);
+        display: flex;
+        flex-direction: column;
+        min-height: 180px;
+      }
+      .project-card:hover {
+        box-shadow: 0 8px 24px rgba(0, 123, 255, 0.13);
+        transform: translateY(-4px) scale(1.02);
+      }
+      .project-card h3 {
+        margin: 0 0 8px 0;
+        color: var(--primary);
+        font-size: 1.15rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .project-card p {
+        color: var(--gray);
+        font-size: 1rem;
+        margin-bottom: 12px;
+        flex: 1;
+      }
+      .project-links a {
+        color: var(--primary);
+        margin-right: 12px;
+        font-size: 1.1rem;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .project-links a:hover {
+        color: var(--accent);
+      }
+      .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px 40px;
+        font-size: 1.08rem;
+        margin-bottom: 18px;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--gray);
+      }
+      .contact-item i {
+        color: var(--primary);
+        font-size: 1.2em;
+        min-width: 22px;
+      }
+      .contact-form {
+        margin-top: 18px;
+        max-width: 420px;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px 12px;
+        margin-bottom: 14px;
+        border: 1px solid #cce0fc;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-family: inherit;
+        background: #fafdff;
+        resize: vertical;
+      }
+      .contact-form button {
+        background: var(--primary);
+        color: var(--white);
+        border: none;
+        padding: 12px 28px;
+        border-radius: 8px;
+        font-size: 1.08rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .contact-form button:hover {
+        background: var(--accent);
+        color: var(--secondary);
+      }
+      footer {
+        text-align: center;
+        padding: 24px 0 12px 0;
+        color: #888;
+        font-size: 1rem;
+        background: transparent;
+      }
+      @media (max-width: 700px) {
+        main {
+          padding: 0 4px;
+        }
+        section {
+          padding: 18px 6px 12px 6px;
+        }
+        .about-content {
+          flex-direction: column;
+          gap: 18px;
+        }
+        .about-img {
+          margin: 0 auto;
+        }
+        .skills-list {
+          gap: 10px 12px;
+        }
+        .contact-info {
+          gap: 10px 0;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Hafizullah Jihadwal</h1>
+      <p>Senior System Development Specialist</p>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/hafizullah-jihadwal"
+          target="_blank"
+          title="LinkedIn"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/yourusername" target="_blank" title="GitHub"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="mailto:jihadwal.h@gmail.com" title="Email"
+          ><i class="fas fa-envelope"></i
+        ></a>
+        <a href="cv.pdf" download title="Download CV"
+          ><i class="fas fa-file-download"></i
+        ></a>
+      </div>
+    </header>
+    <nav>
+      <a href="#about" class="active">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <main>
+      <section id="about">
+        <h2><i class="fas fa-user"></i> About Me</h2>
+        <div class="about-content">
+          <div class="about-img">
+            <!-- Replace with your photo -->
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="Profile Photo"
+            />
+          </div>
+          <div class="about-text">
+            <p>
+              I am a passionate and experienced System Development Specialist
+              with expertise in Java, PHP, Python, and modern web frameworks. I
+              enjoy building robust, scalable, and user-friendly applications.
+              My goal is to deliver high-quality solutions and continuously grow
+              as a technology professional.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="skills">
+        <h2><i class="fas fa-cogs"></i> Skills</h2>
+        <ul class="skills-list">
+          <li><i class="fab fa-java"></i> Java</li>
+          <li><i class="fab fa-php"></i> PHP</li>
+          <li><i class="fab fa-python"></i> Python</li>
+          <li><i class="fab fa-laravel"></i> Laravel</li>
+          <li><i class="fab fa-react"></i> React</li>
+          <li><i class="fab fa-angular"></i> Angular</li>
+          <li><i class="fab fa-node-js"></i> Node.js</li>
+          <li><i class="fas fa-database"></i> SQL/MongoDB</li>
+          <li><i class="fab fa-docker"></i> Docker</li>
+          <li><i class="fab fa-git-alt"></i> Git</li>
+          <li><i class="fas fa-project-diagram"></i> System Design</li>
+          <li><i class="fas fa-users-cog"></i> Agile/TDD</li>
+          <!-- Add more skills below -->
+          <li><i class="fab fa-aws"></i> AWS</li>
+          <li><i class="fab fa-linux"></i> Linux</li>
+          <li><i class="fas fa-cloud"></i> Cloud Computing</li>
+          <li><i class="fas fa-shield-alt"></i> Cybersecurity</li>
+          <li><i class="fas fa-language"></i> English, Dari, Pashto</li>
+          <li><i class="fas fa-chart-line"></i> Data Analysis</li>
+          <li><i class="fas fa-mobile-alt"></i> Mobile App Dev</li>
+        </ul>
+      </section>
+      <section id="projects">
+        <h2><i class="fas fa-briefcase"></i> Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3><i class="fas fa-globe"></i> Portfolio Website</h3>
+            <p>
+              A personal portfolio website to showcase my skills, projects, and
+              experience. Built with HTML, CSS, and JavaScript for a modern,
+              responsive design.
+            </p>
+            <div class="project-links">
+              <a href="#" target="_blank"
+                ><i class="fas fa-external-link-alt"></i> Live</a
+              >
+              <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3><i class="fas fa-database"></i> Inventory System</h3>
+            <p>
+              Developed a full-stack inventory management system using Java
+              Spring Boot and React, featuring real-time analytics and
+              reporting.
+            </p>
+            <div class="project-links">
+              <a href="#" target="_blank"
+                ><i class="fas fa-external-link-alt"></i> Live</a
+              >
+              <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3><i class="fas fa-user-shield"></i> Authentication API</h3>
+            <p>
+              RESTful API for user authentication and authorization, built with
+              Node.js, Express, and MongoDB, implementing JWT and OAuth2.
+            </p>
+            <div class="project-links">
+              <a href="#" target="_blank"
+                ><i class="fas fa-external-link-alt"></i> Live</a
+              >
+              <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3><i class="fab fa-python"></i> Python-Quiz-App</h3>
+            <p>
+              A simple Python-based quiz application with a user-friendly
+              interface, supporting multiple question types and scoring.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/hafizullah123/Python-Quiz-App"
+                target="_blank"
+                ><i class="fab fa-github"></i> Code</a
+              >
+            </div>
+          </div>
+          <div class="project-card">
+            <h3><i class="fab fa-html5"></i> HTML-CSS-JS-Calculator</h3>
+            <p>
+              A responsive calculator built using HTML, CSS, and JavaScript.
+              Features basic arithmetic operations and a clean UI.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/hafizullah123/HTML-CSS-JS-Calculator"
+                target="_blank"
+                ><i class="fab fa-github"></i> Code</a
+              >
+            </div>
+          </div>
+          <div class="project-card">
+            <h3><i class="fab fa-php"></i> PHP-Login-System</h3>
+            <p>
+              A secure login system built with PHP and MySQL, including user
+              registration, authentication, and password hashing.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/hafizullah123/PHP-Login-System"
+                target="_blank"
+                ><i class="fab fa-github"></i> Code</a
+              >
+            </div>
+          </div>
+          <div class="project-card">
+            <h3><i class="fab fa-java"></i> Java-Student-Management</h3>
+            <p>
+              A Java application for managing student records, supporting CRUD
+              operations and search functionality.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/hafizullah123/Java-Student-Management"
+                target="_blank"
+                ><i class="fab fa-github"></i> Code</a
+              >
+            </div>
+          </div>
+          <!-- Add more projects below -->
+          <div class="project-card">
+            <h3><i class="fas fa-mobile-alt"></i> Mobile Banking App</h3>
+            <p>
+              Designed and developed a secure mobile banking app for Android and
+              iOS using React Native and Firebase, supporting real-time
+              transactions and notifications.
+            </p>
+            <div class="project-links">
+              <a href="#" target="_blank"
+                ><i class="fas fa-external-link-alt"></i> Live</a
+              >
+              <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3><i class="fas fa-cloud"></i> Cloud File Storage</h3>
+            <p>
+              Built a scalable cloud file storage platform with AWS S3
+              integration, user authentication, and sharing features using
+              Python Flask.
+            </p>
+            <div class="project-links">
+              <a href="#" target="_blank"
+                ><i class="fas fa-external-link-alt"></i> Live</a
+              >
+              <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3><i class="fas fa-chart-bar"></i> Data Analytics Dashboard</h3>
+            <p>
+              Interactive dashboard for visualizing business KPIs, built with
+              Angular and D3.js, featuring real-time data updates and export
+              options.
+            </p>
+            <div class="project-links">
+              <a href="#" target="_blank"
+                ><i class="fas fa-external-link-alt"></i> Live</a
+              >
+              <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h2><i class="fas fa-envelope-open-text"></i> Contact</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i> Kabul, Afghanistan
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i> +93 XXX XXX XXX
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i> jihadwal.h@gmail.com
+          </div>
+        </div>
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea rows="4" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+    <footer>&copy; 2025 Hafizullah Jihadwal. All rights reserved.</footer>
+  </body>
+</html>
